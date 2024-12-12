@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="includes/css/styles.css">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <title>Formulário de Inscrição</title>
+</head>
+<body>
+    <form action="dados.php" method="POST">
+        <!-- Banner -->
+        <div class="banner">
+            <div class="wrapper">
+                <h1 class="h1">Inscrição para férias<br>
+                 Julho/2025</h1>
+                <p class="p">Crianças dos 6 aos 12 anos</p>
+            </div>
+        
+
+            <!-- Informações do Responsável -->
+            <div class="form-section">
+                <p>Informações do Responsável</p>
+                <div class="horizontal-fields">
+                    <div class="field">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" laceholder="Digite o nome" required>
+                    </div>
+                    <div class="field smaller">
+                        <label for="apelido">Apelido:</label>
+                        <input type="text" id="apelido" name="apelido" placeholder="Digite o apelido" required>
+                    </div>
+                </div>
+
+                <div class="horizontal-fields">
+                    <div class="field smaller">
+                        <label for="parentesco">Grau de parentesco:</label>
+                        <input type="text" id="parentesco" name="parentesco" placeholder="parentesco" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="email" required>
+                    </div>
+                    
+                </div>
+        
+            <div class="traco">__________________________</div> 
+            
+            
+            <!-- Informações da Criança -->
+            <p>Dados da criança</p>
+            <div class="horizontal-fields">
+                <div class="field">
+                    <label for="nomeCrianca">Nome:</label>
+                    <input type="text" id="nomeCrianca" name="nomeCrianca" placeholder="Digite o nome da Criança" required>
+                </div>
+                <div class="field smaller">
+                    <label for="apelidoCrianca">Apelido:</label>
+                    <input type="text" id="apelidoCrianca" name="apelidoCrianca" placeholder="Digite o apelido" required>
+                </div>
+                
+                    <div class="field smaller">
+                    <label for="idade">Idade:</label>
+                    <input type="date" name="idade" id="idade"  placeholder="Digite a idade" required>
+                </div>
+                </div>
+                <!-- listbox -->
+
+                <label for="desporto">Selecione o desporto:</label>
+                <select id="desporto" name="desporto" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="futebol">Futebol</option>
+                <option value="natacao">Natação</option>
+                <option value="ballet">Ballet</option>
+                <option value="volei">Volei</option>
+                </select>
+            </div>
+
+            
+
+        
+            <!-- Botão de Submissão -->
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+            </div>
+        </div> 
+    </div>
+    </form>
+
+
+</body>
+</html>

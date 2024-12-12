@@ -1,0 +1,202 @@
+/* Define a estrutura de layout */
+* {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Links gerais */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Banner principal */
+.banner {
+  height: 100vh;
+  background-image: url('../../imgs/banner.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 0;
+}
+
+.wapper {
+  
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.p {
+  text-align: center;
+  font-family: arial;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin: 10px;
+  
+}
+
+.h1 {
+  text-align: center;
+  font-family: arial;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.header {
+  max-width: 1550px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* Formulário */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Fundo claro para contraste */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.traco{
+  text-align:center;
+
+}
+/* Estilo geral */
+.horizontal-fields {
+  display: flex;
+  gap: 15px; /* Espaço entre os campos */
+  margin-bottom: 15px;
+}
+
+.field {
+  flex: 2; /* O campo "Nome" ocupará mais espaço */
+  display: flex;
+  flex-direction: column; /* Organiza label e input verticalmente */
+}
+
+.field.smaller {
+  flex: 1; /* O campo "Apelido" ocupará menos espaço */
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  width: 25%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+/* Botão de submissão */
+.form-actions {
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Resposta do botão */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 20px;
+  }
+
+  .wapper {
+    font-size: 24px;
+  }
+
+  .header {
+    font-size: 16px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
