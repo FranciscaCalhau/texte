@@ -44,14 +44,14 @@ if ($conn->query($sql) === TRUE) {
 
 
 
-    //$smtp = $conn->prepare("INSERT INTO inscricao (nome, apelido, parentesco, email, nomeCrianca, apelidoCrianca, idade, desporto) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    //$smtp->bind_param("ssssssis", var: $nome, $apelido, $parentesco, $email, $nomeCrianca, $apelidoCrianca, $idade, $desporto);
+    $smtp = $conn->prepare("INSERT INTO inscricao (nome, apelido, parentesco, email, nomeCrianca, apelidoCrianca, idade, desporto) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $smtp->bind_param("ssssssis", var: $nome, $apelido, $parentesco, $email, $nomeCrianca, $apelidoCrianca, $idade, $desporto);
 
-    //if($smtp->execute()){
-    //    echo "Dados inseridos com sucesso!";
-    //} else {
-      //  echo "Erro ao inserir dados: " . $smtp->error;  
-    //}
-    //$smtp->close();
+    if($smtp->execute())
+        echo "Dados inseridos com sucesso!";
+     else {
+       echo "Erro ao inserir dados: " . $smtp->error;  
+    }
+    $smtp->close();
     $conn->close();
     
